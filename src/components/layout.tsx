@@ -1,14 +1,17 @@
 import Header from './header';
+import Nav from './nav';
 import Footer from './footer';
-import styles from './layout.module.css';
+
+const title = "johnny.blog";
 
 const Layout = ({ children, home }) => {
   return (
-    <div className={styles.container}>
-      <Header />
+    <>
+      <Header title={title} />
+      <Nav title={title} />
       {children}
       <Footer />
-    </div>
+    </>
   );
 };
 

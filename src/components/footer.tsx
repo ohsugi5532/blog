@@ -1,12 +1,18 @@
 import React from 'react';
+import Link from 'next/link';
 import styles from './footer.module.css';
 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <a href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app" target="_blank" rel="noopener noreferrer">
-        Powered by <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-      </a>
+      <div className={styles.container}>
+        <p>Copyright © 2020</p>
+        <div className={styles.link}>
+          <p>Created by </p>
+          <a href="https://twitter.com/Ooooosugiiiiii" target="_blank">@ohsugi5532</a>
+        </div>
+        <p>This site uses Google Analiytics</p>
+      </div>
     </footer>
   );
 };
