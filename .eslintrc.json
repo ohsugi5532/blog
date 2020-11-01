@@ -32,8 +32,9 @@
     }],
     "eqeqeq": ["warn", "always"],
     "react/prop-types": 0,
-    "react/react-in-jsx-scope": "off",
+    "react/react-in-jsx-scope": 0,
     "@typescript-eslint/no-unused-vars": ["error"],
+    "@typescript-eslint/explicit-module-boundary-types": 0,
     "@typescript-eslint/no-explicit-any": 0
   }
 }

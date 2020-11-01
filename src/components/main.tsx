@@ -35,6 +35,6 @@ const Main: React.FC = () => {
       </div>
     </main>
   );
-}
+};
 
 export default Main;

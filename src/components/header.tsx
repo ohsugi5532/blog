@@ -9,7 +9,7 @@ const Header: React.FC = () => {
       <title>johnny.blog</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
-  )
+  );
 };
 
 export default Header;
