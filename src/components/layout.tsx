@@ -1,8 +1,8 @@
-import Header from '../components/header';
-import Footer from '../components/footer';
+import Header from './header';
+import Footer from './footer';
 import styles from './layout.module.css';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, home }) => {
   return (
     <div className={styles.container}>
       <Header />
