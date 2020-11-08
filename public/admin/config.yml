@@ -1,12 +1,8 @@
 backend:
   name: git-gateway
   branch: main
-
-publish_mode: editorial_workflow
-
 media_folder: public/images
 public_folder: /images
-
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "記事" # Used in the UI
