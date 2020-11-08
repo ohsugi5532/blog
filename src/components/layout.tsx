@@ -4,12 +4,12 @@ import Footer from './footer';
 
 const title = "johnny.blog";
 
-type LayoutProp = {
+type LayoutProps = {
   children: any;
   home: any;
 }
 
-const Layout: React.FC<LayoutProp> = ({ children, home }) => {
+const Layout: React.FC<LayoutProps> = ({ children, home }) => {
   return (
     <>
       <Header title={title} />
