@@ -9,14 +9,14 @@ public_folder: /images
 
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
+    label: "ブログ記事一覧" # Used in the UI
     folder: "posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
-      - {label: "Title", name: "title", widget: "string"}
-      - label: "Tag"
+      - {label: "タイトル", name: "title", widget: "string"}
+      - label: "タグ"
         name: "tags"
         widget: "relation"
         collection: "tags"
@@ -25,12 +25,21 @@ collections:
         displayField: ["title"]
         required: false
         multiple: true
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - label: "作成日"
+        name: "date",
+        widget: "datetime"
+        format: "YYYY/MM/DD hh:mm:ss"
+      - label: "サムネイル"
+        name: "thumbnail"
+        widget: "image"
+        required: false
+      - label: "本文"
+        name: "body"
+        widget: "markdown"
+        modes: raw
   - name: "tags"
-    label: "Tags"
+    label: "タグ一覧"
     folder: "tags"
     create: true
     fields:
-      - {label: "Tag Name", name: "title", widget: "string"}
+      - {label: "タグ名", name: "title", widget: "string"}
